@@ -1,70 +1,223 @@
-# Getting Started with Create React App
+# 🧭 React Onboarding Progress Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive, multi-phase onboarding component built with **React** and **Tailwind CSS**. Features dynamic step layouts, progress tracking, and customizable workflows perfect for user onboarding, setup wizards, and multi-step processes.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Multi-Phase Workflow** – Organize complex processes into distinct phases  
+- **Dynamic Step Layouts** – Different visualization styles for each phase  
+- **Progress Tracking** – Visual progress bars and completion percentages  
+- **Interactive Navigation** – Click to jump between phases and steps  
+- **Responsive Design** – Works across desktop and mobile devices  
+- **Modern Color Scheme** – Rose, amber, emerald, violet, and cyan theme
+- **Step Grouping** – Special grouped layout for complex setup phases (Phase 3)
+- **Completion Detection** – Automatic celebration of completion  
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[View Live Prototype](https://n4ngyf.csb.app/) <!-- Replace with your actual deployed URL -->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎨 Color Scheme
 
-### `npm test`
+The component uses a modern, vibrant color palette:
+- **Primary Actions**: Rose (#e11d48)
+- **Completion States**: Warm amber tones
+- **Phase 3 Groups**:
+  - Essential: Emerald (#059669)
+  - Account: Violet (#8b5cf6) 
+  - Final: Cyan (#06b6d4)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📸 Screenshots
 
-### `npm run build`
+<!-- Add screenshots of your component here -->
+- Phase Navigation with Progress Tracking
+<img width="1512" alt="Phase Navigation with Progress Tracking" src="https://github.com/user-attachments/assets/bfd98f3b-0598-4574-9c46-028407f54e12"/>
+- Standard Step Layout (Phases 1, 2, 4)
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/a46bdcc1-de05-4ea5-8744-d7c63f58432b"/>
+- Grouped Horizontal Layout (Phase 3)
+<img width="1509" alt="Standard Step Layout 2" src="https://github.com/user-attachments/assets/6a018ade-386e-49c0-b06b-224b606ad5e7"/>
+- Completion Celebration State
+<img width="1512" alt="Completion Celebration State" src="https://github.com/user-attachments/assets/33f1db88-f673-47f7-a93c-1ce4939ce01a" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### CodeSandbox Setup (Recommended)
+This project is optimized for CodeSandbox development:
 
-### `npm run eject`
+1. Fork this CodeSandbox
+2. Make your modifications
+3. Deploy directly from CodeSandbox using the "Deploy" button
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Local Development
+If you prefer local development:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone the repository
+git clone https://github.com/antoinettesmith/Onboarding-Tracker-UI.git
+cd Onboarding-Tracker-UI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Install dependencies
+npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Start development server
+npm start
+```
 
-## Learn More
+Visit `http://localhost:3000` in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Deployment Options
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### From CodeSandbox (Easiest)
+1. Click the **"Deploy"** button in your CodeSandbox
+2. Choose **"Deploy to Vercel"** or **"Deploy to Netlify"**
+3. Sign in and deploy instantly
 
-### Code Splitting
+**Vercel:**
+```bash
+npm i -g vercel
+vercel
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Netlify:**
+```bash
+npm run build
+# Drag build folder to netlify.com
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Basic Implementation
+```jsx
+import OnboardingProgressTracker from './OnboardingProgressTracker';
 
-### Making a Progressive Web App
+function App() {
+  return (
+    <div className="App">
+      <OnboardingProgressTracker />
+    </div>
+  );
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Custom Phase Configuration
+```jsx
+const customPhases = [
+  {
+    name: "Getting Started",
+    description: "Initial setup and account creation",
+    steps: [
+      { name: "Create Account", completed: false },
+      { name: "Verify Email", completed: false },
+      { name: "Set Password", completed: false },
+    ],
+  },
+  // Add more phases...
+];
+```
 
-### Advanced Configuration
+## 🎨 Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Color Themes
+```js
+const customColors = {
+  purple: "#e11d48", // Rose-600 - Primary Action
+  lightGreen: "#fef3c7", // Amber-100 - Completion Indicator  
+  darkGreen: "#b45309", // Amber-700 - Success State
+  borderGreen: "#b45309", // Border for completed states
+  checkmarkGreen: "#b45309",
 
-### Deployment
+  // Phase 3 group colors
+  essential: "#059669", // Emerald-600
+  account: "#8b5cf6", // Violet-500
+  final: "#06b6d4", // Cyan-500
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Phase Types
+- **Standard Phases** – Traditional step-by-step layout in rows  
+- **Grouped Phases** – Horizontal flow with categorized step groups (Phase 3)
 
-### `npm run build` fails to minify
+## 🏗️ Technical Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Built With
+- **React** – Component framework with hooks (useState)
+- **Tailwind CSS** – Utility-first CSS framework
+- **Create React App** – Build tool and development server
+- **Modern JavaScript** – ES6+ features
+
+### Component Architecture
+```
+OnboardingProgressTracker/
+├── Phase Navigation Bar
+├── Progress Tracking System
+├── Dynamic Step Renderers
+│   ├── Standard Layout (Phases 1,2,4)
+│   └── Grouped Layout (Phase 3)
+├── Current Step Panel
+├── Interactive Step Content
+└── Completion Celebration
+```
+
+### State Management
+- **Phase Tracking** – Active phase and navigation
+- **Step Progress** – Individual step completion status
+- **UI State** – Hover effects, active steps, step indices
+
+### Project Structure
+```
+src/
+├── App.jsx
+├── OnboardingProgressTracker.jsx  # Main component
+├── index.js                       # React entry point
+└── index.css                      # Global styles
+
+public/
+├── index.html
+└── ...
+
+package.json                       # Dependencies & scripts
+README.md                         # This file
+```
+
+## 🧪 Testing
+
+The component includes interactive testing:
+- Click phase buttons to navigate
+- Click step circles to jump between steps
+- Use "CONTINUE" buttons to complete steps
+- Test completion celebration
+
+For automated testing:
+Automated testing can be added via tools like Jest or React Testing Library. For now, use the interactive demo to test behavior.
+
+## 🌟 Key Features in Detail
+
+### Multi-Phase Navigation
+- Visual phase selector with progress indicators
+- Hover tooltips with phase descriptions
+- Color-coded completion states
+
+### Dynamic Step Layouts
+- **Phases 1,2,4**: Traditional grid layout with numbered circles
+- **Phase 3**: Horizontal flow with grouped categories
+
+### Progress Tracking
+- Real-time completion percentages
+- Visual progress bars with smooth animations
+- Step-by-step advancement
+
+### Interactive Elements
+- Clickable step navigation
+- Form inputs and dropdowns
+- Skip/Continue button actions
+
+## 📄 License
+
+This project is licensed under the MIT License – feel free to use it in your own projects!
+
+## 🤝 Contributing
+
+1. Fork the CodeSandbox or GitHub repository
+2. Make your improvements
+3. Test thoroughly
+4. Submit a pull request
