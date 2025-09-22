@@ -49,14 +49,13 @@ This project is optimized for a Netlify workflow:
 3. Connect your GitHub account and select the repo  
 4. **Build command:** `npm run build`  
 5. **Publish directory:** `build`  
-6. Add the following **Environment Variables** in your Netlify dashboard → *Site settings → Build & deploy → Environment*:  
+6. Add the following **Environment Variables** in your Netlify dashboard → *Site settings → Build & deploy → Environment*:
 
-   ```bash
+ ```bash
    NODE_VERSION=20
    DISABLE_ESLINT_PLUGIN=true
 ````
-
-7. Deploy 🚀
+## Deploy 🚀
 
 ### Local Development
 
