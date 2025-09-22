@@ -1,4 +1,4 @@
-import OnboardingTracker from "./OnboardingTracker";
+import OnboardingTracker from "./onboardingtracker";
 
 export default function App() {
   return (
