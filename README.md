@@ -1,8 +1,8 @@
-# 🧭 React Onboarding Progress Tracker
+# React Onboarding Progress Tracker
 
 A comprehensive, multi-phase onboarding component built with **React** and **Tailwind CSS**. Features dynamic step layouts, progress tracking, and customizable workflows perfect for user onboarding, setup wizards, and multi-step processes.
 
-## ✨ Features
+## Features
 
 - **Multi-Phase Workflow** – Organize complex processes into distinct phases  
 - **Dynamic Step Layouts** – Different visualization styles for each phase  
@@ -12,11 +12,11 @@ A comprehensive, multi-phase onboarding component built with **React** and **Tai
 - **Modern Color Scheme** – Rose, amber, emerald, violet, and cyan theme
 - **Completion Detection** – Automatic celebration of completion  
 
-## 🚀 Live Demo
+## Live Demo
 
 [View Live Prototype](https://saas-onboarding-flow.netlify.app/)
 
-## 📸 Screenshots
+## Screenshots
 
 <pre>- Phase Navigation with Progress Tracking</pre>
 <img width="2898" height="296" alt="image" src="https://github.com/user-attachments/assets/d779bbaf-21e6-4b09-826a-f3650cc13cec" />
@@ -27,7 +27,7 @@ A comprehensive, multi-phase onboarding component built with **React** and **Tai
 <pre>- Completion Celebration State</pre>
 <img width="3024" height="2815" alt="image" src="https://github.com/user-attachments/assets/3e0802f8-1ce7-4430-8392-bb11edac21fa" />
 
-## 🛠️ Development
+## Development
 
 ### Netlify Setup (Recommended)
 
@@ -44,7 +44,7 @@ This project is optimized for a Netlify workflow:
    NODE_VERSION=20.16.0
    DISABLE_ESLINT_PLUGIN=true
 ````
-## Deploy 🚀
+## Deploy 
 
 ### Local Development
 
@@ -62,7 +62,7 @@ npm start
 
 Visit `http://localhost:3000` in your browser.
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### Deploy on Netlify (Easiest)
 
@@ -86,7 +86,7 @@ npm run build
   content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"]
   ```
 
-## 📦 Basic Implementation
+## Basic Implementation
 
 ```jsx
 import OnboardingProgressTracker from './OnboardingProgressTracker';
@@ -100,7 +100,7 @@ function App() {
 }
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Color Themes
 
@@ -116,7 +116,7 @@ const customColors = {
 
 * **Standard Phases** – Traditional step-by-step layout in rows
 
-## 🏗️ Technical Details
+## Technical Details
 
 ### Built With
 
@@ -162,7 +162,7 @@ package.json                       # Dependencies & scripts
 README.md                          # This file
 ```
 
-## 🧪 Testing
+## Testing
 
 The component includes interactive testing:
 
