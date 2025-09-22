@@ -52,7 +52,7 @@ This project is optimized for a Netlify workflow:
 6. Add the following **Environment Variables** in your Netlify dashboard → *Site settings → Build & deploy → Environment*:
 
  ```bash
-   NODE_VERSION=20
+   NODE_VERSION=20.16.0
    DISABLE_ESLINT_PLUGIN=true
 ````
 ## Deploy 🚀
