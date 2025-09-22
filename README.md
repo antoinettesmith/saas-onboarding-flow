@@ -29,15 +29,13 @@ The component uses a modern, vibrant color palette:
 
 ## 📸 Screenshots
 
-- Phase Navigation with Progress Tracking  
+<pre>- Phase Navigation with Progress Tracking</pre>
 <img width="2898" height="296" alt="image" src="https://github.com/user-attachments/assets/d779bbaf-21e6-4b09-826a-f3650cc13cec" />
-- Standard Step Layout
+<pre>- Standard Step Layout</pre>
 <img width="1360" height="168" alt="image" src="https://github.com/user-attachments/assets/7a5eb55c-0eec-4ddb-9adf-855bc59e7e31" />
-- Responsive Mobile Design
-  
+<pre>- Responsive Mobile Design</pre> 
 <img width="365" height="192" alt="image" src="https://github.com/user-attachments/assets/1e4e9b4f-aeb6-4f45-a8fa-f22585c0a8ef" />
-
-- Completion Celebration State  
+<pre>- Completion Celebration State</pre>
 <img width="3024" height="2815" alt="image" src="https://github.com/user-attachments/assets/3e0802f8-1ce7-4430-8392-bb11edac21fa" />
 
 ## 🛠️ Development
