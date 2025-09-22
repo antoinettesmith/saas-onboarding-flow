@@ -10,22 +10,11 @@ A comprehensive, multi-phase onboarding component built with **React** and **Tai
 - **Interactive Navigation** – Click to jump between phases and steps  
 - **Responsive Design** – Works across desktop and mobile devices  
 - **Modern Color Scheme** – Rose, amber, emerald, violet, and cyan theme
-- **Step Grouping** – Special grouped layout for complex setup phases (Phase 3)
 - **Completion Detection** – Automatic celebration of completion  
 
 ## 🚀 Live Demo
 
 [View Live Prototype](https://saas-onboarding-flow.netlify.app/)
-
-## 🎨 Color Scheme
-
-The component uses a modern, vibrant color palette:
-- **Primary Actions**: Rose (#e11d48)
-- **Completion States**: Warm amber tones
-- **Phase 3 Groups**:
-  - Essential: Emerald (#059669)
-  - Account: Violet (#8b5cf6) 
-  - Final: Cyan (#06b6d4)
 
 ## 📸 Screenshots
 
@@ -113,44 +102,19 @@ function App() {
 
 ## 🎨 Customization
 
-### Custom Phase Configuration
-
-```jsx
-const customPhases = [
-  {
-    name: "Getting Started",
-    description: "Initial setup and account creation",
-    steps: [
-      { name: "Create Account", completed: false },
-      { name: "Verify Email", completed: false },
-      { name: "Set Password", completed: false },
-    ],
-  },
-  // Add more phases...
-];
-```
-
 ### Color Themes
 
 ```js
 const customColors = {
-  purple: "#e11d48", // Rose-600 - Primary Action
-  lightGreen: "#fef3c7", // Amber-100 - Completion Indicator  
-  darkGreen: "#b45309", // Amber-700 - Success State
-  borderGreen: "#b45309", // Border for completed states
-  checkmarkGreen: "#b45309",
-
-  // Phase 3 group colors
-  essential: "#059669", // Emerald-600
-  account: "#8b5cf6", // Violet-500
-  final: "#06b6d4", // Cyan-500
-};
-```
+    purple: "#6b65ff",
+    lightGreen: "#d2ff66",
+    darkGreen: "#00785d",
+    borderGreen: "#00785d",
+    checkmarkGreen: "#00785d",
 
 ### Phase Types
 
 * **Standard Phases** – Traditional step-by-step layout in rows
-* **Grouped Phases** – Horizontal flow with categorized step groups (Phase 3)
 
 ## 🏗️ Technical Details
 
@@ -168,8 +132,8 @@ OnboardingProgressTracker/
 ├── Phase Navigation Bar
 ├── Progress Tracking System
 ├── Dynamic Step Renderers
-│   ├── Standard Layout (Phases 1,2,4)
-│   └── Grouped Layout (Phase 3)
+│   ├── Standard Layout
+│   └── Responsive mobile design
 ├── Current Step Panel
 ├── Interactive Step Content
 └── Completion Celebration
@@ -220,8 +184,8 @@ Automated testing can be added via tools like Jest or React Testing Library. For
 
 ### Dynamic Step Layouts
 
-* **Phases 1,2,4**: Traditional grid layout with numbered circles
-* **Phase 3**: Horizontal flow with grouped categories
+* Traditional grid layout with numbered circles
+* Responsive mobile layout
 
 ### Progress Tracking
 
