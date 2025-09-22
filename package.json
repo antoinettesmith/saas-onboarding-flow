@@ -13,8 +13,10 @@
     "recharts": "^2.x.x"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "npm run watch:css && react-scripts build",
+    "prestart": "postcss src/tailwind.css -o src/main.css",
+    "start": "react-scripts start",
+    "prebuild": "postcss src/tailwind.css -o src/main.css",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/tailwind.css -o src/main.css"
