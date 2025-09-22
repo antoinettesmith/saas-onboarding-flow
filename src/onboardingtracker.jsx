@@ -538,7 +538,7 @@ export default function OnboardingProgressTracker() {
           <div className="hidden md:block absolute inset-x-0 top-1/2 h-0.5 bg-gray-300 -z-10 -translate-y-1/2"></div>
 
           {/* All Steps */}
-          <div className="w-full flex flex-col gap-4 md:flex-row md:justify-around md:overflow-visible pt-2">
+          <div className="w-full flex flex-col gap-4 md:flex-row md:flex-wrap md:justify-between md:overflow-visible pt-2 min-w-0">
             {" "}
             {steps.map((step, idx) => {
               const isActive = idx === activeStepIndex;
@@ -607,7 +607,7 @@ export default function OnboardingProgressTracker() {
           {/* show the horizontal connector only on desktop */}
           <div className="hidden md:block absolute inset-x-0 top-1/2 h-0.5 bg-gray-300 -z-10 -translate-y-1/2"></div>
 
-          <div className="w-full flex flex-col gap-4 md:flex-row md:justify-around md:overflow-visible pt-2">
+          <div className="w-full flex flex-col gap-4 md:flex-row md:flex-wrap md:justify-between md:overflow-visible pt-2 min-w-0">
             {" "}
             {steps.map((step, idx) => {
               const isActive = idx === activeStepIndex;
@@ -727,7 +727,7 @@ export default function OnboardingProgressTracker() {
     : phasesWithIndex; // Desktop: show all
 
   return (
-    <div className="w-full mx-auto bg-white rounded-lg p-8 ">
+    <div className="w-full max-w-screen-xl mx-auto bg-white rounded-lg p-8 overflow-x-hidden">
       {/* Phase Pills + Connectors + % (no numbers; purple when active, green when complete) */}
       <div
         className={`w-full !mx-0 !justify-start text-left md:mb-10 mb-5 ${
@@ -735,7 +735,8 @@ export default function OnboardingProgressTracker() {
         }`}
       >
         <div className="flex items-center">
-          <div className="flex md:flex-row flex-col items-start md:items-center gap-6 md:gap-0">
+      <div className="flex md:flex-row flex-col md:flex-wrap items-start md:items-center gap-4 md:gap-4 min-w-0">
+
             {phasesForUI.map(phase => {
               const index = phase.__idx; // keep using the original index everywhere below
               const prog = getPhaseProgress(phase); // 0..1
@@ -766,7 +767,7 @@ export default function OnboardingProgressTracker() {
               return (
                 <div
                   key={phase.name}
-                  className="flex items-center min-w-[220px]"
+                  className="flex items-center flex-shrink min-w-0"
                   onMouseEnter={() => setHoveredPhase(index)}
                   onMouseLeave={() => setHoveredPhase(null)}
                 >
@@ -774,10 +775,9 @@ export default function OnboardingProgressTracker() {
                   <div className="relative group">
                     <button
                       onClick={() => canClick && setActivePhase(index)}
-                      className="relative rounded-full border-2 px-14 py-5 text-md font-semibold transition-all duration-200 whitespace-nowrap shadow-sm hover:shadow-md overflow-hidden
+                      className="relative rounded-full border-2 px-6 md:px-10 py-4 text-sm md:text-md font-semibold transition-all duration-200 shadow-sm hover:shadow-md overflow-hidden text-ellipsis
                       focus:outline-none focus-visible:outline-none focus:ring-0"
                       style={{
-                        minWidth: "200px",
                         backgroundColor: baseBg,
                         color: baseText,
                         borderColor: baseBrd,
@@ -812,8 +812,7 @@ export default function OnboardingProgressTracker() {
 
                   {/* CONNECTOR to NEXT PILL */}
                   {index !== phaseData.length - 1 && !isMobile && (
-                    <div className="hidden md:block w-24 md:w-40 lg:w-56 mx-4">
-                      <div className="w-24 md:w-40 lg:w-56 mx-4">
+                    <div className="hidden md:block flex-1 min-w-[32px] mx-3">
                         <div className="h-1 w-full bg-gray-200 rounded overflow-hidden relative">
                           <div
                             className="absolute left-0 top-0 h-full rounded transition-all duration-500"
@@ -823,7 +822,6 @@ export default function OnboardingProgressTracker() {
                             }}
                           />
                         </div>
-                      </div>
                     </div>
                   )}
                 </div>
