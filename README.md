@@ -174,7 +174,7 @@ The component includes interactive testing:
 For automated testing:
 Automated testing can be added via tools like Jest or React Testing Library. For now, use the interactive demo to test behavior.
 
-## 🌟 Key Features in Detail
+## Key Features in Detail
 
 ### Multi-Phase Navigation
 
@@ -199,11 +199,11 @@ Automated testing can be added via tools like Jest or React Testing Library. For
 * Form inputs and dropdowns
 * Skip/Continue button actions
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License – feel free to use it in your own projects!
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the GitHub repository
 2. Make your improvements
