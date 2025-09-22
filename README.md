@@ -15,7 +15,7 @@ A comprehensive, multi-phase onboarding component built with **React** and **Tai
 
 ## 🚀 Live Demo
 
-[View Live Prototype](https://saas-onboarding-flow.netlify.app/) <!-- Replace with your actual deployed URL -->
+[View Live Prototype](https://saas-onboarding-flow.netlify.app/)
 
 ## 🎨 Color Scheme
 
@@ -29,33 +29,41 @@ The component uses a modern, vibrant color palette:
 
 ## 📸 Screenshots
 
-<!-- Add screenshots of your component here -->
-- Phase Navigation with Progress Tracking
+- Phase Navigation with Progress Tracking  
 <img width="1512" alt="Phase Navigation with Progress Tracking" src="https://github.com/user-attachments/assets/bfd98f3b-0598-4574-9c46-028407f54e12"/>
-- Standard Step Layout (Phases 1, 2, 4)
+- Standard Step Layout (Phases 1, 2, 4)  
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/a46bdcc1-de05-4ea5-8744-d7c63f58432b"/>
-- Grouped Horizontal Layout (Phase 3)
+- Grouped Horizontal Layout (Phase 3)  
 <img width="1509" alt="Standard Step Layout 2" src="https://github.com/user-attachments/assets/6a018ade-386e-49c0-b06b-224b606ad5e7"/>
-- Completion Celebration State
+- Completion Celebration State  
 <img width="1512" alt="Completion Celebration State" src="https://github.com/user-attachments/assets/33f1db88-f673-47f7-a93c-1ce4939ce01a" />
-
 
 ## 🛠️ Development
 
-### CodeSandbox Setup (Recommended)
-This project is optimized for CodeSandbox development:
+### Netlify Setup (Recommended)
 
-1. Fork this CodeSandbox
-2. Make your modifications
-3. Deploy directly from CodeSandbox using the "Deploy" button
+This project is optimized for a Netlify workflow:
+
+1. **Fork/Clone** this repository on GitHub  
+2. In **Netlify → Add new site → Import an existing project**  
+3. Connect your GitHub account and select the repo  
+4. **Build command:** `npm run build`  
+5. **Publish directory:** `build`  
+6. Add the following **Environment Variables** in your Netlify dashboard → *Site settings → Build & deploy → Environment*:  
+
+   ```bash
+   NODE_VERSION=20
+   DISABLE_ESLINT_PLUGIN=true
+````
+
+7. Deploy 🚀
 
 ### Local Development
-If you prefer local development:
 
 ```bash
 # Clone the repository
-git clone https://github.com/antoinettesmith/Onboarding-Tracker-UI.git
-cd Onboarding-Tracker-UI
+git clone https://github.com/antoinettesmith/saas-onboarding-flow.git
+cd saas-onboarding-flow
 
 # Install dependencies
 npm install
@@ -68,25 +76,30 @@ Visit `http://localhost:3000` in your browser.
 
 ## 🚀 Deployment Options
 
-### From CodeSandbox (Easiest)
-1. Click the **"Deploy"** button in your CodeSandbox
-2. Choose **"Deploy to Vercel"** or **"Deploy to Netlify"**
-3. Sign in and deploy instantly
+### Deploy on Netlify (Easiest)
 
-**Vercel:**
-```bash
-npm i -g vercel
-vercel
-```
+1. Push changes to your GitHub repo
+2. In Netlify, **Trigger deploy → Clear cache and deploy site** when needed
 
-**Netlify:**
+**Manual deploy (alternative):**
+
 ```bash
 npm run build
-# Drag build folder to netlify.com
+# Drag the generated /build folder into the Netlify dashboard (Sites → drag & drop)
 ```
 
+**Netlify notes:**
 
-### Basic Implementation
+* Recommended Node version: **LTS (Node 20)**
+* Ensure environment variables are set (`NODE_VERSION`, `DISABLE_ESLINT_PLUGIN`)
+* If Tailwind classes don’t appear, confirm `tailwind.config.js` includes:
+
+  ```js
+  content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"]
+  ```
+
+## 📦 Basic Implementation
+
 ```jsx
 import OnboardingProgressTracker from './OnboardingProgressTracker';
 
@@ -99,7 +112,10 @@ function App() {
 }
 ```
 
+## 🎨 Customization
+
 ### Custom Phase Configuration
+
 ```jsx
 const customPhases = [
   {
@@ -115,9 +131,8 @@ const customPhases = [
 ];
 ```
 
-## 🎨 Customization
-
 ### Color Themes
+
 ```js
 const customColors = {
   purple: "#e11d48", // Rose-600 - Primary Action
@@ -134,18 +149,21 @@ const customColors = {
 ```
 
 ### Phase Types
-- **Standard Phases** – Traditional step-by-step layout in rows  
-- **Grouped Phases** – Horizontal flow with categorized step groups (Phase 3)
+
+* **Standard Phases** – Traditional step-by-step layout in rows
+* **Grouped Phases** – Horizontal flow with categorized step groups (Phase 3)
 
 ## 🏗️ Technical Details
 
 ### Built With
-- **React** – Component framework with hooks (useState)
-- **Tailwind CSS** – Utility-first CSS framework
-- **Create React App** – Build tool and development server
-- **Modern JavaScript** – ES6+ features
+
+* **React** – Component framework with hooks (useState)
+* **Tailwind CSS** – Utility-first CSS framework
+* **Create React App** – Build tool and development server
+* **Modern JavaScript** – ES6+ features
 
 ### Component Architecture
+
 ```
 OnboardingProgressTracker/
 ├── Phase Navigation Bar
@@ -159,11 +177,13 @@ OnboardingProgressTracker/
 ```
 
 ### State Management
-- **Phase Tracking** – Active phase and navigation
-- **Step Progress** – Individual step completion status
-- **UI State** – Hover effects, active steps, step indices
+
+* **Phase Tracking** – Active phase and navigation
+* **Step Progress** – Individual step completion status
+* **UI State** – Hover effects, active steps, step indices
 
 ### Project Structure
+
 ```
 src/
 ├── App.jsx
@@ -176,16 +196,17 @@ public/
 └── ...
 
 package.json                       # Dependencies & scripts
-README.md                         # This file
+README.md                          # This file
 ```
 
 ## 🧪 Testing
 
 The component includes interactive testing:
-- Click phase buttons to navigate
-- Click step circles to jump between steps
-- Use "CONTINUE" buttons to complete steps
-- Test completion celebration
+
+* Click phase buttons to navigate
+* Click step circles to jump between steps
+* Use "CONTINUE" buttons to complete steps
+* Test completion celebration
 
 For automated testing:
 Automated testing can be added via tools like Jest or React Testing Library. For now, use the interactive demo to test behavior.
@@ -193,23 +214,27 @@ Automated testing can be added via tools like Jest or React Testing Library. For
 ## 🌟 Key Features in Detail
 
 ### Multi-Phase Navigation
-- Visual phase selector with progress indicators
-- Hover tooltips with phase descriptions
-- Color-coded completion states
+
+* Visual phase selector with progress indicators
+* Hover tooltips with phase descriptions
+* Color-coded completion states
 
 ### Dynamic Step Layouts
-- **Phases 1,2,4**: Traditional grid layout with numbered circles
-- **Phase 3**: Horizontal flow with grouped categories
+
+* **Phases 1,2,4**: Traditional grid layout with numbered circles
+* **Phase 3**: Horizontal flow with grouped categories
 
 ### Progress Tracking
-- Real-time completion percentages
-- Visual progress bars with smooth animations
-- Step-by-step advancement
+
+* Real-time completion percentages
+* Visual progress bars with smooth animations
+* Step-by-step advancement
 
 ### Interactive Elements
-- Clickable step navigation
-- Form inputs and dropdowns
-- Skip/Continue button actions
+
+* Clickable step navigation
+* Form inputs and dropdowns
+* Skip/Continue button actions
 
 ## 📄 License
 
@@ -217,7 +242,7 @@ This project is licensed under the MIT License – feel free to use it in your o
 
 ## 🤝 Contributing
 
-1. Fork the CodeSandbox or GitHub repository
+1. Fork the GitHub repository
 2. Make your improvements
 3. Test thoroughly
 4. Submit a pull request
