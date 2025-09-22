@@ -15,7 +15,7 @@ A comprehensive, multi-phase onboarding component built with **React** and **Tai
 
 ## 🚀 Live Demo
 
-[View Live Prototype](https://pd79l8-3000.csb.app/) <!-- Replace with your actual deployed URL -->
+[View Live Prototype](https://saas-onboarding-flow.netlify.app/) <!-- Replace with your actual deployed URL -->
 
 ## 🎨 Color Scheme
 
